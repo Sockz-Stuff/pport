@@ -30,6 +30,7 @@
 		74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BB29BA7ABB00CD75FC /* IngredientType.swift */; };
 		74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */; };
 		74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BD29BA7ABB00CD75FC /* AddModel.swift */; };
+		D4C1295029BACE3800DCEDE3 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		74C714C429BA7ABB00CD75FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74C714C529BA7ABB00CD75FC /* PantryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryRowView.swift; sourceTree = "<group>"; };
 		74C714C729BA7ABB00CD75FC /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				74C714BE29BA7ABB00CD75FC /* Main */,
 				74C714B829BA7ABB00CD75FC /* Models */,
 				74C7149529BA785000CD75FC /* RTabView.swift */,
+				D4C1294E29BACE1D00DCEDE3 /* Recipe */,
 				742820D429BA74CB00DC9758 /* pport */,
 				742820E529BA74CC00DC9758 /* pportTests */,
 				742820EF29BA74CC00DC9758 /* pportUITests */,
@@ -197,6 +200,14 @@
 				74C714C729BA7ABB00CD75FC /* AddView.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		D4C1294E29BACE1D00DCEDE3 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */,
 				74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */,
 				74C7149629BA785000CD75FC /* RTabView.swift in Sources */,
+				D4C1295029BACE3800DCEDE3 /* RecipeView.swift in Sources */,
 				742820D629BA74CB00DC9758 /* pportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

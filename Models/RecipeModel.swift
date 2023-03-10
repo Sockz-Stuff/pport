@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import Firebase
 
 struct Recipe: Identifiable {
     var id: String
-    var name: String  //recipe name
-    var ingredients: Array<String>  //ingredients
-    var link: String //link to steps
+    var Name: String  //recipe name
+    var Ingredients: Array<String>  //ingredients
+    var Quantity: Array <Int>
+    var Link: String //link to steps
 }
+
