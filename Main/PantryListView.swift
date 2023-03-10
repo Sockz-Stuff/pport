@@ -39,7 +39,7 @@ struct PantryListView: View {
         // Currently the link takes me to the PantryDetailView, which has paramters of IngredientType
         // Pantry Row view is the thing thats specifically shown on each stub
         
-       
+       //test addition
             //Image("Pbackground")
             VStack(){
                 NavigationView{
