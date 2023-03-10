@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		742820D629BA74CB00DC9758 /* pportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820D529BA74CB00DC9758 /* pportApp.swift */; };
-		742820D829BA74CB00DC9758 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820D729BA74CB00DC9758 /* ContentView.swift */; };
 		742820DA29BA74CC00DC9758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820D929BA74CC00DC9758 /* Assets.xcassets */; };
 		742820DD29BA74CC00DC9758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820DC29BA74CC00DC9758 /* Preview Assets.xcassets */; };
 		742820E729BA74CC00DC9758 /* pportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820E629BA74CC00DC9758 /* pportTests.swift */; };
 		742820F129BA74CC00DC9758 /* pportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820F029BA74CC00DC9758 /* pportUITests.swift */; };
 		742820F329BA74CC00DC9758 /* pportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */; };
+		7428210129BA758F00DC9758 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210029BA758F00DC9758 /* FirebaseAuth */; };
+		7428210329BA758F00DC9758 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210229BA758F00DC9758 /* FirebaseFirestore */; };
+		7428210729BA772700DC9758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7428210629BA772700DC9758 /* GoogleService-Info.plist */; };
+		74C7149629BA785000CD75FC /* RTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7149529BA785000CD75FC /* RTabView.swift */; };
+		74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C729BA7ABB00CD75FC /* AddView.swift */; };
+		74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BF29BA7ABB00CD75FC /* PantryIngredientView.swift */; };
+		74C714CD29BA7B3300CD75FC /* IngredientTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C029BA7ABB00CD75FC /* IngredientTitleView.swift */; };
+		74C714CE29BA7B3300CD75FC /* PantryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C129BA7ABB00CD75FC /* PantryDetailView.swift */; };
+		74C714CF29BA7B3300CD75FC /* PantryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C229BA7ABB00CD75FC /* PantryListView.swift */; };
+		74C714D029BA7B3300CD75FC /* DatabaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C329BA7ABB00CD75FC /* DatabaseViewModel.swift */; };
+		74C714D129BA7B3300CD75FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C429BA7ABB00CD75FC /* ContentView.swift */; };
+		74C714D229BA7B3300CD75FC /* PantryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C529BA7ABB00CD75FC /* PantryRowView.swift */; };
+		74C714D329BA7B3300CD75FC /* IngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714B929BA7ABB00CD75FC /* IngredientModel.swift */; };
+		74C714D429BA7B3300CD75FC /* PantryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BA29BA7ABB00CD75FC /* PantryModel.swift */; };
+		74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BB29BA7ABB00CD75FC /* IngredientType.swift */; };
+		74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */; };
+		74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BD29BA7ABB00CD75FC /* AddModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,21 @@
 		742820EC29BA74CC00DC9758 /* pportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		742820F029BA74CC00DC9758 /* pportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITests.swift; sourceTree = "<group>"; };
 		742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7428210629BA772700DC9758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74C7149529BA785000CD75FC /* RTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTabView.swift; sourceTree = "<group>"; };
+		74C714B929BA7ABB00CD75FC /* IngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModel.swift; sourceTree = "<group>"; };
+		74C714BA29BA7ABB00CD75FC /* PantryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryModel.swift; sourceTree = "<group>"; };
+		74C714BB29BA7ABB00CD75FC /* IngredientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientType.swift; sourceTree = "<group>"; };
+		74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		74C714BD29BA7ABB00CD75FC /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
+		74C714BF29BA7ABB00CD75FC /* PantryIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryIngredientView.swift; sourceTree = "<group>"; };
+		74C714C029BA7ABB00CD75FC /* IngredientTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTitleView.swift; sourceTree = "<group>"; };
+		74C714C129BA7ABB00CD75FC /* PantryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryDetailView.swift; sourceTree = "<group>"; };
+		74C714C229BA7ABB00CD75FC /* PantryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListView.swift; sourceTree = "<group>"; };
+		74C714C329BA7ABB00CD75FC /* DatabaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewModel.swift; sourceTree = "<group>"; };
+		74C714C429BA7ABB00CD75FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74C714C529BA7ABB00CD75FC /* PantryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryRowView.swift; sourceTree = "<group>"; };
+		74C714C729BA7ABB00CD75FC /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7428210129BA758F00DC9758 /* FirebaseAuth in Frameworks */,
+				7428210329BA758F00DC9758 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +107,10 @@
 		742820C929BA74CB00DC9758 = {
 			isa = PBXGroup;
 			children = (
+				74C714C629BA7ABB00CD75FC /* Add */,
+				74C714BE29BA7ABB00CD75FC /* Main */,
+				74C714B829BA7ABB00CD75FC /* Models */,
+				74C7149529BA785000CD75FC /* RTabView.swift */,
 				742820D429BA74CB00DC9758 /* pport */,
 				742820E529BA74CC00DC9758 /* pportTests */,
 				742820EF29BA74CC00DC9758 /* pportUITests */,
@@ -94,6 +131,7 @@
 		742820D429BA74CB00DC9758 /* pport */ = {
 			isa = PBXGroup;
 			children = (
+				7428210629BA772700DC9758 /* GoogleService-Info.plist */,
 				742820D529BA74CB00DC9758 /* pportApp.swift */,
 				742820D729BA74CB00DC9758 /* ContentView.swift */,
 				742820D929BA74CC00DC9758 /* Assets.xcassets */,
@@ -127,6 +165,40 @@
 			path = pportUITests;
 			sourceTree = "<group>";
 		};
+		74C714B829BA7ABB00CD75FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74C714B929BA7ABB00CD75FC /* IngredientModel.swift */,
+				74C714BA29BA7ABB00CD75FC /* PantryModel.swift */,
+				74C714BB29BA7ABB00CD75FC /* IngredientType.swift */,
+				74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */,
+				74C714BD29BA7ABB00CD75FC /* AddModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74C714BE29BA7ABB00CD75FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				74C714BF29BA7ABB00CD75FC /* PantryIngredientView.swift */,
+				74C714C029BA7ABB00CD75FC /* IngredientTitleView.swift */,
+				74C714C129BA7ABB00CD75FC /* PantryDetailView.swift */,
+				74C714C229BA7ABB00CD75FC /* PantryListView.swift */,
+				74C714C329BA7ABB00CD75FC /* DatabaseViewModel.swift */,
+				74C714C429BA7ABB00CD75FC /* ContentView.swift */,
+				74C714C529BA7ABB00CD75FC /* PantryRowView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		74C714C629BA7ABB00CD75FC /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				74C714C729BA7ABB00CD75FC /* AddView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +215,10 @@
 			dependencies = (
 			);
 			name = pport;
+			packageProductDependencies = (
+				7428210029BA758F00DC9758 /* FirebaseAuth */,
+				7428210229BA758F00DC9758 /* FirebaseFirestore */,
+			);
 			productName = pport;
 			productReference = 742820D229BA74CB00DC9758 /* pport.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +291,9 @@
 				Base,
 			);
 			mainGroup = 742820C929BA74CB00DC9758;
+			packageReferences = (
+				742820FF29BA758F00DC9758 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 742820D329BA74CB00DC9758 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +312,7 @@
 			files = (
 				742820DD29BA74CC00DC9758 /* Preview Assets.xcassets in Resources */,
 				742820DA29BA74CC00DC9758 /* Assets.xcassets in Resources */,
+				7428210729BA772700DC9758 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742820D829BA74CB00DC9758 /* ContentView.swift in Sources */,
+				74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */,
+				74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */,
+				74C714CD29BA7B3300CD75FC /* IngredientTitleView.swift in Sources */,
+				74C714CE29BA7B3300CD75FC /* PantryDetailView.swift in Sources */,
+				74C714CF29BA7B3300CD75FC /* PantryListView.swift in Sources */,
+				74C714D029BA7B3300CD75FC /* DatabaseViewModel.swift in Sources */,
+				74C714D129BA7B3300CD75FC /* ContentView.swift in Sources */,
+				74C714D229BA7B3300CD75FC /* PantryRowView.swift in Sources */,
+				74C714D329BA7B3300CD75FC /* IngredientModel.swift in Sources */,
+				74C714D429BA7B3300CD75FC /* PantryModel.swift in Sources */,
+				74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */,
+				74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */,
+				74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */,
+				74C7149629BA785000CD75FC /* RTabView.swift in Sources */,
 				742820D629BA74CB00DC9758 /* pportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +670,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		742820FF29BA758F00DC9758 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7428210029BA758F00DC9758 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742820FF29BA758F00DC9758 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7428210229BA758F00DC9758 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742820FF29BA758F00DC9758 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 742820CA29BA74CB00DC9758 /* Project object */;
 }
