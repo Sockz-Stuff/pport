@@ -44,36 +44,21 @@ struct PantryListView: View {
     }
     
     var body: some View {
-        
-        
-        
-        //RtabView -> PantryListView -> PantryIngredientView
-        
-        // all of these display their rows using PantryRowView
-        
-        //navigation link takes me to that spot when i click on one of the items
-        // Currently the link takes me to the PantryDetailView, which has paramters of IngredientType
-        // Pantry Row view is the thing thats specifically shown on each stub
-        
-       //test addition
-            //Image("Pbackground")
+
             VStack(){
-                NavigationView{
-                    List(pantryList){item in
-                        NavigationLink(destination: PantryDetailView(currentIngrType: item)){
-                            PantryRowView(title: item.type)
-                        }
-                    }.navigationBarTitle("My Pantry")
-                       
-                }
-            
-                NavigationView{
-                    List(categories, selection: $selection){ item in
-                        NavigationLink(destination: PantryDetailView(currentIngrType: IngredientType))
+
+                
+                NavigationStack {
+                    List {
+                        NavigationLink("Protein"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Protein"))}
+                        NavigationLink("Veggie"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Veggie"))}
+                        NavigationLink("Fruit"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Fruit"))}
+                        NavigationLink("Dairy"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Dairy"))}
+                        NavigationLink("Grain"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Grain"))}
+                        NavigationLink("Misc."){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Misc."))}
                         
-                    
-                    }.navigationBarTitle("My Pantry")
-                       
+                    }
+                    .navigationTitle("My Pantry")
                 }
                 
                 Button(action: setup){

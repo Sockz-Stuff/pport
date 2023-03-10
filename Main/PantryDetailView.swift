@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct PantryDetailView: View {
-    var currentIngrType: IngredientType
+    var currentIngrType: ingredientDrawer
     var IngrDetails = FirstIngrTypeModel().drawer
     var body: some View {
         
         HStack(){
             
             NavigationView{
-                // this navigation link takes me to the PantryIngredientView when i click on one of the bars
-                // these bars are also PantryRowView but need to show the Ingredients of the displayed type
-                List(currentIngrType.drawer){item in
+            
+                List(currentIngrType.ingr_Drawer){ item in
                     NavigationLink(destination: PantryIngredientView(specificType: item)){
                         PantryRowView(title: item.name)
-                    }
-                }.navigationBarTitle(currentIngrType.type)
+                    }.navigationBarTitle(item.type)
+                    
+                }
+                
             }
-            
-            
             
         }
         
@@ -33,6 +32,7 @@ struct PantryDetailView: View {
 
 struct PantryDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PantryDetailView(currentIngrType: myMeatDrawer)
+        //change the way this recieved data for the ingredients
+        PantryDetailView(currentIngrType: ingredientDrawer())
     }
 }
