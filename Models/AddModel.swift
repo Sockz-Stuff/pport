@@ -196,6 +196,8 @@ class UserAddition:ObservableObject{
         self.unit = .cup
         self.type = .misc
         userIngredients = additionModel()
+        
+        fetchData()
     }
     
     func fetchData(){

@@ -19,12 +19,28 @@ struct PantryListView: View {
     //@ObservedObject var pantryScheme:
     @EnvironmentObject var addInfo: UserAddition
     var pantryList = FirstPantryModel().pantry
-    //var ourPantry: Pantry
+    
+    struct u_types: Identifiable, Hashable {
+        let name: String
+        let id = UUID()
+    }
+    
+    var categories = [
+        u_types(name: "Protein"),
+        u_types(name: "Veggie"),
+        u_types(name: "Fruit"),
+        u_types(name: "Dairy"),
+        u_types(name: "Grain"),
+        u_types(name: "Misc.")
+    
+    ]
+    
+    @State var selection = Set<UUID>()
+    
     
     func setup(){
         
         addInfo.fetchData()
-        
     }
     
     var body: some View {
@@ -47,6 +63,15 @@ struct PantryListView: View {
                         NavigationLink(destination: PantryDetailView(currentIngrType: item)){
                             PantryRowView(title: item.type)
                         }
+                    }.navigationBarTitle("My Pantry")
+                       
+                }
+            
+                NavigationView{
+                    List(categories, selection: $selection){ item in
+                        NavigationLink(destination: PantryDetailView(currentIngrType: IngredientType))
+                        
+                    
                     }.navigationBarTitle("My Pantry")
                        
                 }

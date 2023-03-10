@@ -64,6 +64,8 @@ struct AddView: View {
 //            }
 //        }
         
+        
+        
         let db=Firestore.firestore()
         let ref=db.collection("pantry").document()
         
