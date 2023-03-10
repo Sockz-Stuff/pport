@@ -25,13 +25,13 @@ struct RTabView: View {
                 .tabItem{
                     Image(systemName: "plus")
                     Text("Add/Remove")
-                }/*
-            AddView()
+                }
+            RecipeView()
                 .tabItem{
                 Image(systemName: "book")
                     Text("Recipes")
                 }
-                  */
+                  
             
         }
     }

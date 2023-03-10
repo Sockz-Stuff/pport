@@ -10,35 +10,43 @@ import Firebase
 
 class DatabaseViewModel: ObservableObject {
     
-    @Published var list = [Recipe]()
-    func getData() {
+    @Published var Recipes = [Recipe]()
+    private var db = Firestore.firestore()
+    
+    func getRecipes() {
     
     // Get a reference to the database
-    let db = Firestore.firestore()
-    
-    // Read the documents at a specific path
     db.collection("Recipes").getDocuments { snapshot, error in
-        
-        if error == nil {
-            
-            if let snapshot = snapshot {
-                // Update the list property in the main thread
-                DispatchQueue.main.async {
-                    self.list = snapshot.documents.map { d in
-                        return Recipe(id: d.documentID,
-                                    name: d["Name"] as? String ?? "",
-                                      ingredients: (d["Ingredients"] as? Array<String>)! ,
-                                      link: d["Link"] as? String ?? "")
-                    }
+                    
+    // Check for errors
+    if error == nil {
+    // No errors
+                        
+    if let snapshot = snapshot {
+                            
+    // Update the list property in the main thread
+        DispatchQueue.main.async {
+                                
+    // Get all the documents and create Todos
+            self.Recipes = snapshot.documents.map { doc in
+    // Create a Todo item for each document returned
+                return Recipe(id: doc.documentID,
+                Name: doc["name"] as? String ?? "",
+                Ingredients: doc["ingredients"] as! [String],
+                Quantity: doc["quantity"] as! [Int],
+                Link: doc["link"] as? String ?? "")
+                            }
                 }
-                
-                
+                            
+                            
             }
         }
         else {
-            // Handle the error
+                        // Handle the error
         }
     }
+           
 }
 
 }
+
