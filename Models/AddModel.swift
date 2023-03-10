@@ -75,6 +75,7 @@ enum Types:Double{
 class ingredientDrawer:ObservableObject{
     
     var id:Int = 0
+    var size:Int = 0
     var thisType:String
     var typeString:String
     var ingr_Drawer:[Ingredient]
@@ -103,12 +104,28 @@ class ingredientDrawer:ObservableObject{
         
     }
     
+    //gives an array of the names for all the ingredients in the drawer
+    func list()->[String]{
+        
+        var temp:[String] = []
+        
+        for i in 1...self.size{
+            
+            temp.append(self.ingr_Drawer[i].name)
+            
+        }
+        
+        return temp
+        
+    }
+    
     
     
     //main function/reason i made this
     func addTo(ingr_add:Ingredient){
         
         self.ingr_Drawer.append(ingr_add)
+        self.size+=1
         
     }
     
@@ -183,6 +200,32 @@ class additionModel:ObservableObject{
         
     }
     
+    func giveDrawer(tS:String)->ingredientDrawer{
+        
+        if(tS == "Protein"){
+            return userProt
+        }
+        else if(tS == "Veggie"){
+            return userVeggie
+        }
+        else if(tS == "Dairy"){
+            return userDairy
+        }
+        else if(tS == "Grain"){
+            return userGrain
+        }
+        else if(tS == "Fruit"){
+            return userFruit
+        }
+        else if(tS == "Misc."){
+            return userMisc
+        }
+        else{
+            exit(EXIT_FAILURE)
+        } // error case
+        
+    }
+    
 }
 
 //this seems kind of arbitrary but its how im able to move information around within the views within losing it
@@ -196,6 +239,8 @@ class UserAddition:ObservableObject{
         self.unit = .cup
         self.type = .misc
         userIngredients = additionModel()
+        
+        fetchData()
     }
     
     func fetchData(){
