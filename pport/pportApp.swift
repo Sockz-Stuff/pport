@@ -10,7 +10,7 @@ import Firebase
 
 @main
 struct pportApp: App {
-    
+   // @EnvironmentObject var addInfo: UserAddition
     init(){
         
         FirebaseApp.configure()
@@ -19,7 +19,7 @@ struct pportApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RTabView(addInfo: UserAddition())
+            Login().environmentObject(UserAddition())
         }
     }
 }
