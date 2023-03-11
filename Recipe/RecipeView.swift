@@ -16,17 +16,22 @@ struct RecipeView: View {
     var body: some View {
         VStack{
             HStack{
+                Text("Recipes Ready To Make").font(.system(size: 28.0)).bold()
+                    .bold()
+                    .frame(width: 2000, height: 50)
+                    .foregroundColor(.white)
+                    .background(Color.red)
+            }
+           HStack{
                List (model.Recipes) { item in
                     Text(item.Name)
-                    
-                    let _url = URL(string: item.Link)
-                    Link("Link To Recipe", destination: _url!)
-                    // self.model.getData()
+                       let _url = URL(string: item.Link)
+                       Link("Link To Recipe", destination: _url!)
+                        .bold()
                 }
-                Divider()
-            }
+               
         }
-        
+        }
     }
         
     init() {
