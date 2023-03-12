@@ -10,7 +10,7 @@ import Firebase
 
 struct AddView: View {
     
-    let measurements :[Units] = [.oz,.cup,.floz,.gram,.kg,.lb]
+    let measurements :[Units] = [.oz,.cup,.floz,.gram,.kg,.lb,.count]
     let types :[Types] = [.prot, .veg, .dairy, .fruit, .grain, .misc]
     @EnvironmentObject var addInfo: UserAddition
     @State var comments:String=""
