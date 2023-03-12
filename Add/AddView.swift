@@ -22,26 +22,6 @@ struct AddView: View {
     
     func addIngr(){
         
-        
-        
-//        ref.getDocuments { snapshot , error in
-//            guard error == nil else{
-//                print(error!.localizedDescription)
-//                return
-//            }
-//            if let snapshot = snapshot{
-//                for document in snapshot.documents{
-//                    let data = document.data()
-//                    let name = data["name"] as? String ?? ""
-//                    let unit = data["unit"] as? Units ?? .oz
-//                    let type = data["type"] as? Types ?? .prot
-//                    let amount = data["amount"] as? Int ?? 0
-//
-//
-//
-//                }
-//            }
-//        }
         if(comments == ""){
             whatsWrong = "Missing Ingredient Name"
             showingAlert = true
@@ -54,16 +34,9 @@ struct AddView: View {
         }
         
         
-        addInfo.userIngredients.addToPantry(typeof: addInfo.type.formatted(), unitof: addInfo.unit.formatted(), quantity: String(quantity), nameof: comments)
+
         whatsWrong = "Ingredient: " + comments + " added!"
         showingAlert = true
-        
-//        ref.setData(["breed": dogBreed, "id" : 10]) { error in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//        }
-        
         
         
         let db=Firestore.firestore()
@@ -71,11 +44,13 @@ struct AddView: View {
         
         
         
-        ref.setData(["i_name": comments, "amount": quantity, "type": addInfo.type.formatted(), "unit": addInfo.unit.formatted()]){error in
+        ref.setData(["i_name": comments, "amount": String(quantity), "type": addInfo.type.formatted(), "unit": addInfo.unit.formatted()]){error in
             if let error = error{
                 print(error.localizedDescription)
             }
         }
+        
+        addInfo.fetchData()
         
     }
     
@@ -106,7 +81,7 @@ struct AddView: View {
             
             
             Spacer()
-            Stepper(value: $quantity, in: 1...100){
+            Stepper(value: $quantity, in: 0...100){
                 Text("Quantity: \(quantity)")
                     .bold()
             }
