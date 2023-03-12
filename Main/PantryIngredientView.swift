@@ -45,10 +45,10 @@ struct PantryIngredientView: View {
             Button(action: setup){
                 Text("Delete Ingredient")
                     .font(.title)
-                    .fontWeight(.bold)
+                    .fontWeight(.medium)
                     .padding()
-                    .background(.brown)
-                    .foregroundColor(.green)
+                    .background(.green)
+                    .foregroundColor(.black)
                     .cornerRadius(5)
             }
         }.alert(deletedIt, isPresented: $showingAlert) {

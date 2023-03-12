@@ -19,8 +19,8 @@ struct RecipeView: View {
                 Text("Recipes Ready To Make").font(.system(size: 28.0)).bold()
                     .bold()
                     .frame(width: 2000, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.red)
+                    .foregroundColor(.black)
+                    .background(.green)
             }
            HStack{
                List (model.Recipes) { item in
@@ -41,7 +41,7 @@ struct RecipeView: View {
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RecipeView()
     }
 }
 

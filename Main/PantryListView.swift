@@ -64,10 +64,10 @@ struct PantryListView: View {
                 Button(action: setup){
                     Text("Load Pantry")
                          .font(.title)
-                         .fontWeight(.bold)
+                         .fontWeight(.medium)
                          .padding()
-                         .background(.brown)
-                     .foregroundColor(.green)
+                         .background(.green)
+                     .foregroundColor(.black)
                          .cornerRadius(5)
                  }
                 

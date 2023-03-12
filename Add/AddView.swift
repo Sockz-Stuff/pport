@@ -93,7 +93,7 @@ struct AddView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding()
-                    .background(.black)
+                    .background(.brown)
                 .foregroundColor(.green)
                     .cornerRadius(5)
             }.alert(whatsWrong, isPresented: $showingAlert) {
