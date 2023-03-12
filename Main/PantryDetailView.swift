@@ -10,6 +10,7 @@ import SwiftUI
 struct PantryDetailView: View {
     var currentIngrType: ingredientDrawer
     var IngrDetails = FirstIngrTypeModel().drawer
+    @EnvironmentObject var addInfo: UserAddition
     var body: some View {
         
         HStack(){
@@ -17,7 +18,7 @@ struct PantryDetailView: View {
             NavigationView{
             
                 List(currentIngrType.ingr_Drawer){ item in
-                    NavigationLink(destination: PantryIngredientView(specificType: item)){
+                    NavigationLink(destination: PantryIngredientView(specificType: item).environmentObject(addInfo)){
                         PantryRowView(title: item.name)
                     }.navigationBarTitle(item.type)
                     

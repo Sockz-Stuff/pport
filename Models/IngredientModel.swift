@@ -9,11 +9,11 @@ import Foundation
 
 
 struct Ingredient:Identifiable{
-    var id: Int
+    var id: String
     var name:String
     var amount:String
     var type:String
 }
 
 
-let TestIngredientModel = Ingredient(id: 1, name: "Steak", amount: "4", type: "meat")
+let TestIngredientModel = Ingredient(id: "1", name: "Steak", amount: "4", type: "meat")

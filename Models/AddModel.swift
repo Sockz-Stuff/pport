@@ -169,11 +169,11 @@ class additionModel:ObservableObject{
     
     
     //will take in a specific ingredients information and then add it to the representative type; main function
-    func addToPantry(typeof:String, unitof:String, quantity:String, nameof:String){
+    func addToPantry(typeof:String, unitof:String, quantity:String, nameof:String, docuID: String){
         
         let tS:String = typeof
         
-        let toAdd = Ingredient(id: newID(), name: nameof, amount: quantity, type: typeof)
+        let toAdd = Ingredient(id: docuID, name: nameof, amount: quantity, type: typeof)
         
         
         if(tS == "Protein"){
@@ -248,6 +248,8 @@ class UserAddition:ObservableObject{
         let db = Firestore.firestore()
         let ref = db.collection("pantry")
         
+        self.userIngredients=additionModel()
+        
         ref.getDocuments { snapshot, error in
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -262,10 +264,11 @@ class UserAddition:ObservableObject{
                     let type = data["type"] as? String ?? ""
                     let unit = data["unit"] as? String ?? ""
                     let amount = data["amount"] as? String ?? ""
+                    let docuID = document.documentID
                     
                     //want to make an array of ingredientDrawers
                     
-                    self.userIngredients.addToPantry(typeof: type, unitof: unit, quantity: amount, nameof: id)
+                    self.userIngredients.addToPantry(typeof: type, unitof: unit, quantity: amount, nameof: id, docuID: docuID)
                     //all entries in the database will be apart of the Useraddition's userIngredient which is of type userAddition
                     //userAddition has a component called ingrDrawer which represents the types, however addtopantry handles the addition by type
                 }

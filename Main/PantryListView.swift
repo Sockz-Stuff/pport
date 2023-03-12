@@ -50,12 +50,12 @@ struct PantryListView: View {
                 
                 NavigationStack {
                     List {
-                        NavigationLink("Protein"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Protein"))}
-                        NavigationLink("Veggie"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Veggie"))}
-                        NavigationLink("Fruit"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Fruit"))}
-                        NavigationLink("Dairy"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Dairy"))}
-                        NavigationLink("Grain"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Grain"))}
-                        NavigationLink("Misc."){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Misc."))}
+                        NavigationLink("Protein"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Protein")).environmentObject(addInfo)}
+                        NavigationLink("Veggie"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Veggie")).environmentObject(addInfo)}
+                        NavigationLink("Fruit"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Fruit")).environmentObject(addInfo)}
+                        NavigationLink("Dairy"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Dairy")).environmentObject(addInfo)}
+                        NavigationLink("Grain"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Grain")).environmentObject(addInfo)}
+                        NavigationLink("Misc."){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Misc.")).environmentObject(addInfo)}
                         
                     }
                     .navigationTitle("My Pantry")
@@ -66,7 +66,7 @@ struct PantryListView: View {
                          .font(.title)
                          .fontWeight(.bold)
                          .padding()
-                         .background(.black)
+                         .background(.brown)
                      .foregroundColor(.green)
                          .cornerRadius(5)
                  }
