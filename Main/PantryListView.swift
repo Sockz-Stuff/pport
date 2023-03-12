@@ -17,6 +17,7 @@ import SwiftUI
 //shows a stub for each ingredient type
 struct PantryListView: View {
     //@ObservedObject var pantryScheme:
+    
     @EnvironmentObject var addInfo: UserAddition
     var pantryList = FirstPantryModel().pantry
     //var ourPantry: Pantry

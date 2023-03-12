@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030AB7ED29BD6571006046D8 /* HeaderSignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030AB7EC29BD6571006046D8 /* HeaderSignOut.swift */; };
 		037218C329BBB65300AB6ABB /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037218C229BBB65300AB6ABB /* Login.swift */; };
 		742820D629BA74CB00DC9758 /* pportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820D529BA74CB00DC9758 /* pportApp.swift */; };
 		742820DA29BA74CC00DC9758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820D929BA74CC00DC9758 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030AB7EC29BD6571006046D8 /* HeaderSignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSignOut.swift; sourceTree = "<group>"; };
 		037218C229BBB65300AB6ABB /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		742820D229BA74CB00DC9758 /* pport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		742820D529BA74CB00DC9758 /* pportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportApp.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				74C714BE29BA7ABB00CD75FC /* Main */,
 				74C714B829BA7ABB00CD75FC /* Models */,
 				74C7149529BA785000CD75FC /* RTabView.swift */,
+				030AB7EC29BD6571006046D8 /* HeaderSignOut.swift */,
 				742820D429BA74CB00DC9758 /* pport */,
 				742820E529BA74CC00DC9758 /* pportTests */,
 				742820EF29BA74CC00DC9758 /* pportUITests */,
@@ -342,6 +345,7 @@
 			files = (
 				74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */,
 				74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */,
+				030AB7ED29BD6571006046D8 /* HeaderSignOut.swift in Sources */,
 				74C714CD29BA7B3300CD75FC /* IngredientTitleView.swift in Sources */,
 				74C714CE29BA7B3300CD75FC /* PantryDetailView.swift in Sources */,
 				74C714CF29BA7B3300CD75FC /* PantryListView.swift in Sources */,

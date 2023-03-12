@@ -12,7 +12,7 @@ struct Login: View {
     @State private var email = ""
     @State private var password = ""
     @EnvironmentObject var addInfo: UserAddition
-    @State public var userIsLoggedIn = false
+    @State private var userIsLoggedIn = false
     var body: some View {
         
             if userIsLoggedIn {
@@ -89,7 +89,7 @@ struct Login: View {
                         Auth.auth().addStateDidChangeListener { auth, user in
                             if user != nil {
                                 userIsLoggedIn
-                                //.toggle()
+                                .toggle()
                                 //need this to be signed in, will add back when sing out is implemented
                             }
                            

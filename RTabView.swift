@@ -11,8 +11,9 @@ import SwiftUI
 struct RTabView: View {
     
    var addInfo: UserAddition
-    
+    @State private var userIsLoggedIn:Bool=true
     var body: some View {
+        
         TabView{
             
             
@@ -25,6 +26,11 @@ struct RTabView: View {
                 .tabItem{
                     Image(systemName: "plus")
                     Text("Add/Remove")
+                }
+            HeaderSignOut(userIsLoggedIn:userIsLoggedIn)
+                .tabItem{
+                    Image(systemName: "square")
+                    Text("out")
                 }/*
             AddView()
                 .tabItem{
