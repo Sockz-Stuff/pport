@@ -30,6 +30,7 @@
 		74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BB29BA7ABB00CD75FC /* IngredientType.swift */; };
 		74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */; };
 		74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BD29BA7ABB00CD75FC /* AddModel.swift */; };
+		868D802729BAD470009D8D6E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D802629BAD470009D8D6E /* LoginView.swift */; };
 		D4C1295029BACE3800DCEDE3 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		74C714C429BA7ABB00CD75FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74C714C529BA7ABB00CD75FC /* PantryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryRowView.swift; sourceTree = "<group>"; };
 		74C714C729BA7ABB00CD75FC /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		868D802629BAD470009D8D6E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		742820C929BA74CB00DC9758 = {
 			isa = PBXGroup;
 			children = (
+				868D802629BAD470009D8D6E /* LoginView.swift */,
 				74C714C629BA7ABB00CD75FC /* Add */,
 				74C714BE29BA7ABB00CD75FC /* Main */,
 				74C714B829BA7ABB00CD75FC /* Models */,
@@ -358,6 +361,7 @@
 				74C714D229BA7B3300CD75FC /* PantryRowView.swift in Sources */,
 				74C714D329BA7B3300CD75FC /* IngredientModel.swift in Sources */,
 				74C714D429BA7B3300CD75FC /* PantryModel.swift in Sources */,
+				868D802729BAD470009D8D6E /* LoginView.swift in Sources */,
 				74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */,
 				74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */,
 				74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */,
