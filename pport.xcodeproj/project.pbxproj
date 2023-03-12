@@ -17,6 +17,8 @@
 		7428210329BA758F00DC9758 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210229BA758F00DC9758 /* FirebaseFirestore */; };
 		7428210729BA772700DC9758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7428210629BA772700DC9758 /* GoogleService-Info.plist */; };
 		747FB47A29BE792700C64662 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 747FB47929BE792700C64662 /* FirebaseFirestoreSwift */; };
+		74831C1329BE84690067BF3D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74831C1229BE84690067BF3D /* Login.swift */; };
+		74831C1529BE8FE90067BF3D /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74831C1429BE8FE90067BF3D /* LogoutView.swift */; };
 		74C7149629BA785000CD75FC /* RTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7149529BA785000CD75FC /* RTabView.swift */; };
 		74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714C729BA7ABB00CD75FC /* AddView.swift */; };
 		74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BF29BA7ABB00CD75FC /* PantryIngredientView.swift */; };
@@ -63,6 +65,8 @@
 		742820F029BA74CC00DC9758 /* pportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITests.swift; sourceTree = "<group>"; };
 		742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7428210629BA772700DC9758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74831C1229BE84690067BF3D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		74831C1429BE8FE90067BF3D /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		74C7149529BA785000CD75FC /* RTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTabView.swift; sourceTree = "<group>"; };
 		74C714B929BA7ABB00CD75FC /* IngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModel.swift; sourceTree = "<group>"; };
 		74C714BA29BA7ABB00CD75FC /* PantryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryModel.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		742820C929BA74CB00DC9758 = {
 			isa = PBXGroup;
 			children = (
+				747FB47B29BE841E00C64662 /* Login */,
 				74C714C629BA7ABB00CD75FC /* Add */,
 				74C714BE29BA7ABB00CD75FC /* Main */,
 				74C714B829BA7ABB00CD75FC /* Models */,
@@ -176,6 +181,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		747FB47B29BE841E00C64662 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				74831C1229BE84690067BF3D /* Login.swift */,
+				74831C1429BE8FE90067BF3D /* LogoutView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		74C714B829BA7ABB00CD75FC /* Models */ = {
@@ -360,8 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */,
+				74831C1329BE84690067BF3D /* Login.swift in Sources */,
 				74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */,
 				74C714CD29BA7B3300CD75FC /* IngredientTitleView.swift in Sources */,
+				74831C1529BE8FE90067BF3D /* LogoutView.swift in Sources */,
 				74C714CE29BA7B3300CD75FC /* PantryDetailView.swift in Sources */,
 				74C714CF29BA7B3300CD75FC /* PantryListView.swift in Sources */,
 				74C714D029BA7B3300CD75FC /* DatabaseViewModel.swift in Sources */,
