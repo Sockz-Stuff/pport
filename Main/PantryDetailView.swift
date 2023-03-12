@@ -13,21 +13,30 @@ struct PantryDetailView: View {
     @EnvironmentObject var addInfo: UserAddition
     var body: some View {
         
-        HStack(){
-            
-            NavigationView{
-            
-                List(currentIngrType.ingr_Drawer){ item in
-                    NavigationLink(destination: PantryIngredientView(specificType: item).environmentObject(addInfo)){
-                        PantryRowView(title: item.name)
-                    }.navigationBarTitle(item.type)
+        VStack{
+            HStack{
+                Text(currentIngrType.thisType).font(.system(size: 28.0)).bold()
+                    .bold()
+                                .frame(width: 2000, height: 50)
+                                .foregroundColor(.black)
+                                .background(.green)
+            }
+            HStack(){
+                
+                NavigationView{
+                    
+                    List(currentIngrType.ingr_Drawer){ item in
+                        NavigationLink(destination: PantryIngredientView(specificType: item).environmentObject(addInfo)){
+                            PantryRowView(title: item.name)
+                        }
+                        
+                    }
                     
                 }
                 
             }
             
         }
-        
     }
 }
 

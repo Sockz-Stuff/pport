@@ -47,7 +47,13 @@ struct PantryListView: View {
 
             VStack(){
 
-                
+                HStack{
+                    Text("My Pantry").font(.system(size: 28.0)).bold()
+                        .bold()
+                        .frame(width: 2000, height: 50)
+                        .foregroundColor(.black)
+                        .background(.green)
+                }
                 NavigationStack {
                     List {
                         NavigationLink("Protein"){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Protein")).environmentObject(addInfo)}
@@ -58,7 +64,7 @@ struct PantryListView: View {
                         NavigationLink("Misc."){ PantryDetailView(currentIngrType: addInfo.userIngredients.giveDrawer(tS: "Misc.")).environmentObject(addInfo)}
                         
                     }
-                    .navigationTitle("My Pantry")
+                    
                 }
                 
                 Button(action: setup){
