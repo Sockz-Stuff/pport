@@ -59,6 +59,14 @@ struct AddView: View {
         
         VStack{
     
+            HStack{
+                Text("New Ingredient").font(.system(size: 28.0)).bold()
+                    .bold()
+                    .frame(width: 2000, height: 50)
+                    .foregroundColor(.black)
+                    .background(.green)
+            }
+            
             Spacer()
             
             TextField("Name of Ingredient here", text:$comments)
@@ -93,8 +101,8 @@ struct AddView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding()
-                    .background(.black)
-                .foregroundColor(.green)
+                    .background(.green )
+                .foregroundColor(.black)
                     .cornerRadius(5)
             }.alert(whatsWrong, isPresented: $showingAlert) {
                 Button("OK", role: .cancel) { }
