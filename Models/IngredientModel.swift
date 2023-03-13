@@ -13,7 +13,8 @@ struct Ingredient:Identifiable{
     var name:String
     var amount:String
     var type:String
+    var unit:String
 }
 
 
-let TestIngredientModel = Ingredient(id: "1", name: "Steak", amount: "4", type: "meat")
+let TestIngredientModel = Ingredient(id: "1", name: "Steak", amount: "4", type: "meat", unit: "LB")

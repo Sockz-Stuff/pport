@@ -8,9 +8,21 @@ struct LoginView: View {
     @State private var createAccountEmail: String = ""
     @State private var createAccountPassword: String = ""
 
+    let darkbrown = Color(red: 92.0/255.0, green: 64.0/255.0, blue: 51.0/255.0)
+    
     var body: some View {
         ZStack {
+            
+            
             VStack {
+            
+                Text("My Pantry Portal").font(.system(size: 28.0)).bold()
+                    .bold()
+                    .frame(width: 400, height: 50)
+                    .foregroundColor(.black)
+                    .background(.green)
+
+                
                 TextField("Email or username", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal, 50)
@@ -32,62 +44,46 @@ struct LoginView: View {
                         }
                     }
                 }
-                .buttonStyle(FilledButtonStyle())
-                .padding(.top, 20)
+                .font(.title3)
+                .fontWeight(.medium)
+                .padding()
+                .background(.green )
+            .foregroundColor(.black)
+                .cornerRadius(5)
+                
 
                 Button("Create account") {
-                    showCreateAccountForm = true
-                }
-                .buttonStyle(FilledButtonStyle())
-                .padding(.top, 20)
-
-                Spacer()
-            }
-            .padding(.bottom, showCreateAccountForm ? 50 : 0)
-
-            if showCreateAccountForm {
-                VStack {
-                    TextField("Email", text: $createAccountEmail)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, 50)
-                        .padding(.top, 50)
-
-                    SecureField("Password", text: $createAccountPassword)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, 50)
-                        .padding(.top, 20)
-
-                    Button("Create account") {
-                        Auth.auth().createUser(withEmail: createAccountEmail, password: createAccountPassword) { authResult, error in
-                            if let error = error {
-                                // Handle error if account creation failed
-                                print("Account creation failed: \(error.localizedDescription)")
-                            } else {
-                                // Account creation succeeded, sign in the user and navigate to the main screen
-                                Auth.auth().signIn(withEmail: createAccountEmail, password: createAccountPassword) { authResult, error in
-                                    if let error = error {
-                                        // Handle error if sign in failed
-                                        print("Sign in failed: \(error.localizedDescription)")
-                                    } else {
-                                        // Sign in succeeded, navigate to the main screen
-                                        navigateToMainScreen()
-                                    }
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        if let error = error {
+                            // Handle error if account creation failed
+                            print("Account creation failed: \(error.localizedDescription)")
+                        } else {
+                            // Account creation succeeded, sign in the user and navigate to the main screen
+                            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                                if let error = error {
+                                    // Handle error if sign in failed
+                                    print("Sign in failed: \(error.localizedDescription)")
+                                } else {
+                                    navigateToMainScreen()
+                                    // Sign in succeeded, navigate to the main screen
+                                    
                                 }
                             }
                         }
                     }
-                    .buttonStyle(FilledButtonStyle())
-                    .padding(.top, 20)
+                    //showCreateAccountForm = true
+                }
+                .font(.title3)
+                .fontWeight(.medium)
+                .padding()
+                .background(.green )
+            .foregroundColor(.black)
+                .cornerRadius(5)
 
-                    Button("Cancel") {
-                        showCreateAccountForm = false
-                    }
-                    .buttonStyle(FilledButtonStyle())
-                    .padding(.top, 20)
+                Spacer()
+            }
 
                     Spacer()
-                }
-            }
         }
     }
 

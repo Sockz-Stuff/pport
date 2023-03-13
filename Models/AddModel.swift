@@ -172,11 +172,11 @@ class additionModel:ObservableObject{
     
     
     //will take in a specific ingredients information and then add it to the representative type; main function
-    func addToPantry(typeof:String, unitof:String, quantity:String, nameof:String, docuID: String){
+    func addToPantry(typeof:String, unitof:String, quantity:String, nameof:String, docuID: String, unit:String){
         
         let tS:String = typeof
         
-        let toAdd = Ingredient(id: docuID, name: nameof, amount: quantity, type: typeof)
+        let toAdd = Ingredient(id: docuID, name: nameof, amount: quantity, type: typeof, unit: unit)
         
         
         if(tS == "Protein"){
@@ -273,7 +273,7 @@ class UserAddition:ObservableObject{
                     
                     //want to make an array of ingredientDrawers
                     
-                    self.userIngredients.addToPantry(typeof: type, unitof: unit, quantity: amount, nameof: id, docuID: docuID)
+                    self.userIngredients.addToPantry(typeof: type, unitof: unit, quantity: amount, nameof: id, docuID: docuID, unit: unit)
                     //all entries in the database will be apart of the Useraddition's userIngredient which is of type userAddition
                     //userAddition has a component called ingrDrawer which represents the types, however addtopantry handles the addition by type
                 }

@@ -13,12 +13,12 @@ struct Pantry:Identifiable{
     var shelf: Array<IngredientType>
 }
 
-let testI1 = Ingredient(id: "1", name: "Steak", amount: "4", type: "Meat")
-let testI2 = Ingredient(id: "2", name: "Milk", amount: "2", type: "Dairy")
-let testI3 = Ingredient(id: "3", name: "Romain", amount: "13", type: "Vegetable")
-let testI4 = Ingredient(id: "4", name: "Chicken", amount: "3", type: "Meat")
-let testI5 = Ingredient(id: "5", name: "Swiss Cheese", amount: "2", type: "Dairy")
-let testI6 = Ingredient(id: "6", name: "Turnip", amount: "7", type: "Vegetable")
+let testI1 = Ingredient(id: "1", name: "Steak", amount: "4", type: "Meat", unit: "LB")
+let testI2 = Ingredient(id: "2", name: "Milk", amount: "2", type: "Dairy", unit: "LB")
+let testI3 = Ingredient(id: "3", name: "Romain", amount: "13", type: "Vegetable", unit: "LB")
+let testI4 = Ingredient(id: "4", name: "Chicken", amount: "3", type: "Meat", unit: "LB")
+let testI5 = Ingredient(id: "5", name: "Swiss Cheese", amount: "2", type: "Dairy", unit: "LB")
+let testI6 = Ingredient(id: "6", name: "Turnip", amount: "7", type: "Vegetable", unit: "LB")
 
 let meats = [testI1, testI4]
 let veggies = [testI3, testI6]
