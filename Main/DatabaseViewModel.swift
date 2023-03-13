@@ -48,5 +48,25 @@ class DatabaseViewModel: ObservableObject {
            
 }
 
+    func giveRecipeIngr()->[String]{
+        
+        var temp:[String] = []
+        
+        
+        let rSize = Recipes.count
+        
+        for i in 0...rSize{
+            
+            for j in 0...Recipes[i].Ingredients.count{
+                temp.append(Recipes[i].Ingredients[j])
+            }
+            
+        }
+        
+        
+        return temp
+        
+    }
+    
 }
 

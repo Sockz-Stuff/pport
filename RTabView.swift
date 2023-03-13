@@ -32,7 +32,7 @@ struct RTabView: View {
                 Image(systemName: "book")
                     Text("Recipes")
                 }
-            GeneratorView()
+            GeneratorView().environmentObject(addInfo)
                 .tabItem{
                     Image(systemName: "engine.combustion")
                     Text("Generator")
