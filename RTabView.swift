@@ -25,12 +25,17 @@ struct RTabView: View {
             AddView().environmentObject(addInfo)
                 .tabItem{
                     Image(systemName: "plus")
-                    Text("Add/Remove")
+                    Text("Add")
                 }
             RecipeView()
                 .tabItem{
                 Image(systemName: "book")
                     Text("Recipes")
+                }
+            GeneratorView()
+                .tabItem{
+                    Image(systemName: "engine.combustion")
+                    Text("Generator")
                 }
             LogoutView()
                 .tabItem{

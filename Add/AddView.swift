@@ -51,7 +51,7 @@ struct AddView: View {
         }
         
         addInfo.fetchData()
-        
+        addedright()
     }
     
     var body: some View {
@@ -114,6 +114,17 @@ struct AddView: View {
         
         
     }
+    func addedright() {
+        let contentView = RTabView(addInfo: UserAddition())// Replace UserAddition with the name of your actual data model if applicable
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    @State private var window: UIWindow?
 }
 
 //marshall waz here

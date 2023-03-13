@@ -45,7 +45,7 @@ struct PantryIngredientView: View {
         let ref=db.collection("pantry")
         
         ref.document(todelete.id).delete()
-        viewModel.deleteed = true
+        //viewModel.deleteed = true
         
     }
     
@@ -77,10 +77,22 @@ struct PantryIngredientView: View {
                     .cornerRadius(5)
             }
         }.alert(deletedIt, isPresented: $showingAlert) {
-            Button("OK", role: .cancel) {}
+            Button("OK", role: .cancel) {deleteed()}
             }
         
     }
+    func deleteed() {
+        let contentView = RTabView(addInfo: UserAddition())
+        //PantryIngredientView(specificType: specificType).environmentObject(addInfo);// Replace UserAddition with the name of your actual data model if applicable
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    @State private var window: UIWindow? // Add
 }
 
 struct PantryIngredientView_Previews: PreviewProvider {

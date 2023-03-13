@@ -251,6 +251,8 @@ class UserAddition:ObservableObject{
         let db = Firestore.firestore()
         let ref = db.collection("pantry")
         
+        
+        
         self.userIngredients=additionModel()
         
         ref.getDocuments { snapshot, error in

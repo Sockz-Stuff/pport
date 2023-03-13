@@ -33,9 +33,10 @@ struct SwiftUIFirebaseAuthApp: App {
 
     var body: some Scene {
         WindowGroup {
-            let viewModel = AppViewModel()
-            Contented()
-                .environmentObject(viewModel)
+            //let viewModel = AppViewModel()
+           // Contented()
+             //   .environmentObject(viewModel)
+            LoginView()
         }
     }
 }
