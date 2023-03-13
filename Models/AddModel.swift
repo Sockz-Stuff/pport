@@ -281,4 +281,17 @@ class UserAddition:ObservableObject{
         }
     }
     
+    func giveIngredients()->[String]{
+        
+        var temp = userIngredients.userFruit.list()
+        temp += userIngredients.userMisc.list()
+        temp += userIngredients.userProt.list()
+        temp += userIngredients.userDairy.list()
+        temp += userIngredients.userGrain.list()
+        temp += userIngredients.userVeggie.list()
+        
+        
+        return temp
+    }
+    
 }
