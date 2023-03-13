@@ -10,7 +10,7 @@ import Firebase
 
 struct AddView: View {
     
-    let measurements :[Units] = [.oz,.cup,.floz,.gram,.kg,.lb]
+    let measurements :[Units] = [.oz,.cup,.floz,.gram,.kg,.lb,.count]
     let types :[Types] = [.prot, .veg, .dairy, .fruit, .grain, .misc]
     @EnvironmentObject var addInfo: UserAddition
     @State var comments:String=""
@@ -51,7 +51,7 @@ struct AddView: View {
         }
         
         addInfo.fetchData()
-        
+        addedright()
     }
     
     var body: some View {
@@ -114,6 +114,17 @@ struct AddView: View {
         
         
     }
+    func addedright() {
+        let contentView = RTabView(addInfo: UserAddition())// Replace UserAddition with the name of your actual data model if applicable
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    @State private var window: UIWindow?
 }
 
 //marshall waz here

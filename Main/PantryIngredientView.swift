@@ -8,11 +8,34 @@
 import SwiftUI
 import Firebase
 
+struct Contented2: View {
+    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var addInfo: UserAddition
+    
+    var body: some View {
+        NavigationView {
+            if viewModel.deleteed {
+                
+                RTabView(addInfo:UserAddition())
+            }
+            else {
+                
+            }
+        }
+        .onAppear {
+            viewModel.signedIn = viewModel.isSignedIn
+        }
+    }
+    
+}
+
 struct PantryIngredientView: View {
+    @EnvironmentObject var viewModel: AppViewModel
     @State var showView = false
     var specificType: Ingredient
     @State var showingAlert = false
     @State var deletedIt:String = ""
+   
     @EnvironmentObject var addInfo: UserAddition
     
     
@@ -22,6 +45,7 @@ struct PantryIngredientView: View {
         let ref=db.collection("pantry")
         
         ref.document(todelete.id).delete()
+        //viewModel.deleteed = true
         
     }
     
@@ -31,6 +55,7 @@ struct PantryIngredientView: View {
         showingAlert = true
         delete(todelete: specificType)
         addInfo.fetchData()
+        
         
     }
     
@@ -52,9 +77,22 @@ struct PantryIngredientView: View {
                     .cornerRadius(5)
             }
         }.alert(deletedIt, isPresented: $showingAlert) {
-            Button("OK", role: .cancel) {}
+            Button("OK", role: .cancel) {deleteed()}
             }
+        
     }
+    func deleteed() {
+        let contentView = RTabView(addInfo: UserAddition())
+        //PantryIngredientView(specificType: specificType).environmentObject(addInfo);// Replace UserAddition with the name of your actual data model if applicable
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    @State private var window: UIWindow? // Add
 }
 
 struct PantryIngredientView_Previews: PreviewProvider {

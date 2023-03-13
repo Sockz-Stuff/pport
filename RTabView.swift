@@ -10,7 +10,7 @@ import UIKit
 
 
 struct RTabView: View {
-    
+    @EnvironmentObject var viewModel: AppViewModel
    var addInfo: UserAddition
     
     var body: some View {
@@ -25,13 +25,24 @@ struct RTabView: View {
             AddView().environmentObject(addInfo)
                 .tabItem{
                     Image(systemName: "plus")
-                    Text("Add/Remove")
+                    Text("Add")
                 }
             RecipeView()
                 .tabItem{
                 Image(systemName: "book")
                     Text("Recipes")
                 }
+            GeneratorView()
+                .tabItem{
+                    Image(systemName: "engine.combustion")
+                    Text("Generator")
+                }
+            LogoutView()
+                .tabItem{
+                    Image(systemName:"brain.head.profile")
+                    Text("Account")
+                }
+            
             
             
         }

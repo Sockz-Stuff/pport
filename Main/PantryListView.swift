@@ -17,6 +17,7 @@ import SwiftUI
 //shows a stub for each ingredient type
 struct PantryListView: View {
     //@ObservedObject var pantryScheme:
+    @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject var addInfo: UserAddition
     var pantryList = FirstPantryModel().pantry
     
@@ -46,7 +47,6 @@ struct PantryListView: View {
     var body: some View {
 
             VStack(){
-
                 HStack{
                     Text("My Pantry").font(.system(size: 28.0)).bold()
                         .bold()

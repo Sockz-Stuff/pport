@@ -17,6 +17,7 @@ enum Units:Double{
     case lb = 1.75
     case gram = 2.00
     case kg = 2.25
+    case count = 2.50
     
     func formatted()->String  {
         var sizeString = ""
@@ -33,6 +34,8 @@ enum Units:Double{
             sizeString = "Gram"
         case .kg:
             sizeString = "KiloG"
+        case .count:
+            sizeString = "Count"
         }
         return sizeString
     }
@@ -247,6 +250,8 @@ class UserAddition:ObservableObject{
         
         let db = Firestore.firestore()
         let ref = db.collection("pantry")
+        
+        
         
         self.userIngredients=additionModel()
         
