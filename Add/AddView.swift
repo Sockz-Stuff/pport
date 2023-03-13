@@ -51,7 +51,7 @@ struct AddView: View {
         }
         
         addInfo.fetchData()
-        addedright()
+        
     }
     
     var body: some View {
@@ -99,13 +99,13 @@ struct AddView: View {
             Button(action: addIngr) {
                Text("Add to Pantry")
                     .font(.title)
-                    .fontWeight(.bold)
+                    .fontWeight(.medium)
                     .padding()
                     .background(.green )
                 .foregroundColor(.black)
                     .cornerRadius(5)
             }.alert(whatsWrong, isPresented: $showingAlert) {
-                Button("OK", role: .cancel) { }
+                Button("OK", role: .cancel) {addedright()}
             }
                 
              

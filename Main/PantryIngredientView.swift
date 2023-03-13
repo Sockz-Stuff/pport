@@ -62,7 +62,7 @@ struct PantryIngredientView: View {
     var body: some View {
         VStack{
             Text(specificType.name)
-            Text("Amount: "+String(specificType.amount))
+            Text("Amount: "+String(specificType.amount)+" "+specificType.unit)
             Text(specificType.type)
             
         
@@ -83,7 +83,7 @@ struct PantryIngredientView: View {
     }
     func deleteed() {
         let contentView = RTabView(addInfo: UserAddition())
-        //PantryIngredientView(specificType: specificType).environmentObject(addInfo);// Replace UserAddition with the name of your actual data model if applicable
+   
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)
@@ -92,7 +92,7 @@ struct PantryIngredientView: View {
         }
     }
     
-    @State private var window: UIWindow? // Add
+    @State private var window: UIWindow?
 }
 
 struct PantryIngredientView_Previews: PreviewProvider {
