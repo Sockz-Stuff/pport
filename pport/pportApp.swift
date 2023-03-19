@@ -25,6 +25,7 @@
 //}
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 @main
 struct SwiftUIFirebaseAuthApp: App {
