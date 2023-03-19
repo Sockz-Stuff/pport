@@ -10,8 +10,16 @@ import Firebase
 
 class DatabaseViewModel: ObservableObject {
     
-    @Published var Recipes = [Recipe]()
+    
+    
+    @Published var Recipes:[Recipe]
     private var db = Firestore.firestore()
+    
+    init(){
+        
+        Recipes = []
+        
+    }
     
     func getRecipes() {
     
@@ -48,5 +56,35 @@ class DatabaseViewModel: ObservableObject {
            
 }
 
+    func giveRecipeIngr()->[String]{
+        
+        getRecipes()
+        
+        var temp:[String] = []
+        
+        
+//        if(Recipes.isEmpty){
+//            exit(EXIT_FAILURE)
+//
+//        }
+        
+        
+        for i in 0...(Recipes.count-1){
+           
+            
+                //print(Recipes[i].Ingredients.count)
+                for j in 0...(Recipes[i].Ingredients.count-1){
+                    print(j)
+                    temp.append(Recipes[i].Ingredients[j])
+                }
+            
+            
+        }
+        
+        
+        return temp
+        
+    }
+    
 }
 

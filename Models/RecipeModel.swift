@@ -11,8 +11,8 @@ import Firebase
 struct Recipe: Identifiable {
     var id: String
     var Name: String  //recipe name
-    var Ingredients: Array<String>  //ingredients
-    var Quantity: Array <Int>
+    var Ingredients: [String]  //ingredients
+    var Quantity: [Int]
     var Link: String //link to steps
 }
 

@@ -112,9 +112,13 @@ class ingredientDrawer:ObservableObject{
         
         var temp:[String] = []
         
-        for i in 1...self.size{
-            
-            temp.append(self.ingr_Drawer[i].name)
+        for i in 0...(ingr_Drawer.count){
+            print(i)
+                print(ingr_Drawer[i].name)
+            if(ingr_Drawer.count != 0){
+                temp.append( ingr_Drawer[i].name)
+            }
+                //index out of range
             
         }
         
@@ -279,6 +283,44 @@ class UserAddition:ObservableObject{
                 }
             }
         }
+    }
+    
+    func giveIngredients()->[String]{
+        
+        fetchData()
+        
+        var temp:[String] = []
+        print("line 291")
+    
+        
+        if(!userIngredients.userFruit.ingr_Drawer.isEmpty){
+//            temp = temp + userIngredients.userFruit.list()
+            print("line 296")
+            temp.append(contentsOf: userIngredients.userFruit.list())
+        }
+        if(!userIngredients.userMisc.ingr_Drawer.isEmpty){
+//            temp = temp + userIngredients.userMisc.list()
+            temp.append(contentsOf: userIngredients.userMisc.list())
+        }
+        if(!userIngredients.userProt.ingr_Drawer.isEmpty){
+//            temp = temp +  userIngredients.userProt.list()
+            print("line 305")
+            temp.append(contentsOf: userIngredients.userProt.list())
+        }
+        if(!userIngredients.userGrain.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userGrain.list()
+            temp.append(contentsOf: userIngredients.userGrain.list())
+        }
+        if(!userIngredients.userVeggie.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userVeggie.list()
+            temp.append(contentsOf: userIngredients.userVeggie.list())
+        }
+        if(!userIngredients.userDairy.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userDairy.list()
+            temp.append(contentsOf: userIngredients.userDairy.list())
+        }
+        
+        return temp
     }
     
 }
