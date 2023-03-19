@@ -20,33 +20,87 @@ struct GeneratorView: View {
     
     func userRecipe()->[Recipe]{
         
+        models.getRecipes()
+        
         var matchingRecipe:[Recipe] = []
         
         //array of user ingredients (string name)
-        let userI = addInfo.giveIngredients()
+
+        var userI:[String] = []
+        
+        
+        
+        
+        
+        
+        
+        
+//        var temp:[String] = []
+    
+        
+        if(!addInfo.userIngredients.userFruit.ingr_Drawer.isEmpty){
+//            temp = temp + userIngredients.userFruit.list()
+            print("line 296")
+            userI.append(contentsOf: addInfo.userIngredients.userFruit.list())
+        }
+        if(!addInfo.userIngredients.userMisc.ingr_Drawer.isEmpty){
+//            temp = temp + userIngredients.userMisc.list()
+            userI.append(contentsOf: addInfo.userIngredients.userMisc.list())
+        }
+//        if(!addInfo.userIngredients.userProt.ingr_Drawer.isEmpty){
+//            temp = temp +  userIngredients.userProt.list()
+        
+        userI.append(contentsOf: addInfo.userIngredients.userProt.list())
+//        }
+        if(!addInfo.userIngredients.userGrain.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userGrain.list()
+            userI.append(contentsOf: addInfo.userIngredients.userGrain.list())
+        }
+        if(!addInfo.userIngredients.userVeggie.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userVeggie.list()
+            userI.append(contentsOf: addInfo.userIngredients.userVeggie.list())
+        }
+        if(!addInfo.userIngredients.userDairy.ingr_Drawer.isEmpty){
+//            temp += userIngredients.userDairy.list()
+            userI.append(contentsOf: addInfo.userIngredients.userDairy.list())
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         //array of recipe ingredients (string name)
         models.getRecipes()
-        let recipeI = models.giveRecipeIngr()
+        var recipeI:[String] = models.giveRecipeIngr()
+        
+        
         
         var matchingIngr:[String] = []
         
-        for i in 0...recipeI.count{
-            
-            for j in 0...userI.count{
+        for i in 0...(recipeI.count){
+    
+            for j in 0...(userI.count){
                 
-                if(userI[j] == recipeI[i]){
-                    matchingIngr.append(userI[j])
-                }
+                    if(userI[j] == recipeI[i]){
+                        matchingIngr.append(userI[j])
+                    }
+                
                 
             }
             
         }
                 
-        for i in 0...models.Recipes.count{
-            for j in 0...models.Recipes[i].Ingredients.count{
+        for i in 0...(models.Recipes.count){
+            //print(models.Recipes[i].Ingredients.count)
+            for j in 0...(models.Recipes[i].Ingredients.count){
                 for k in 0...matchingIngr.count{
-                    if(models.Recipes[i].Ingredients[j] == matchingIngr[k]){
+                    if((models.Recipes[i].Ingredients[j]) == matchingIngr[k]){
                         matchingRecipe.append(models.Recipes[i])
                     }
 
@@ -61,15 +115,28 @@ struct GeneratorView: View {
     
 
     var body: some View {
-        VStack(){
+        VStack{
             HStack{
-                
+                Text("Recipes Ready To Make").font(.system(size: 28.0)).bold()
+                    .bold()
+                    .frame(width: 2000, height: 50)
+                    .foregroundColor(.black)
+                    .background(.green)
             }
+           HStack{
+               List (userRecipe()) { item in
+                    Text(item.Name)
+                       let _url = URL(string: item.Link)
+                       Link("Link To Recipe", destination: _url!)
+                        .bold()
+                }
+               
         }
-        .onAppear(perform: {fetchRecipes()
-            (self.uNames, self.uAmounts) = createUserArray(userMod: self.addInfo.userIngredients, userNames: &self.uNames, userAmounts: &self.uAmounts)
         }
-        )
+    }
+    
+    init() {
+        models.getRecipes()
     }
     
     func createUserArray(userMod: additionModel, userNames: inout [String], userAmounts: inout [String]) -> ([String], [String]) {
@@ -121,7 +188,7 @@ struct GeneratorView: View {
 
 struct GeneratorView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneratorView(uNames: [], uAmounts: [])
+        GeneratorView()
             .environmentObject(UserAddition())
     }
 }
