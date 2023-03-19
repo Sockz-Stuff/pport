@@ -11,8 +11,6 @@
 		742820DA29BA74CC00DC9758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820D929BA74CC00DC9758 /* Assets.xcassets */; };
 		742820DD29BA74CC00DC9758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820DC29BA74CC00DC9758 /* Preview Assets.xcassets */; };
 		742820E729BA74CC00DC9758 /* pportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820E629BA74CC00DC9758 /* pportTests.swift */; };
-		742820F129BA74CC00DC9758 /* pportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820F029BA74CC00DC9758 /* pportUITests.swift */; };
-		742820F329BA74CC00DC9758 /* pportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */; };
 		7428210129BA758F00DC9758 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210029BA758F00DC9758 /* FirebaseAuth */; };
 		7428210329BA758F00DC9758 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210229BA758F00DC9758 /* FirebaseFirestore */; };
 		7428210729BA772700DC9758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7428210629BA772700DC9758 /* GoogleService-Info.plist */; };
@@ -88,8 +86,6 @@
 		742820E229BA74CC00DC9758 /* pportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		742820E629BA74CC00DC9758 /* pportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportTests.swift; sourceTree = "<group>"; };
 		742820EC29BA74CC00DC9758 /* pportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		742820F029BA74CC00DC9758 /* pportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITests.swift; sourceTree = "<group>"; };
-		742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pportUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7428210629BA772700DC9758 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74831C1229BE84690067BF3D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		74831C1429BE8FE90067BF3D /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 				D4C1294E29BACE1D00DCEDE3 /* Recipe */,
 				742820D429BA74CB00DC9758 /* pport */,
 				742820E529BA74CC00DC9758 /* pportTests */,
-				742820EF29BA74CC00DC9758 /* pportUITests */,
 				742820D329BA74CB00DC9758 /* Products */,
 				747FB47829BE791300C64662 /* Frameworks */,
 			);
@@ -217,15 +212,6 @@
 				742820E629BA74CC00DC9758 /* pportTests.swift */,
 			);
 			path = pportTests;
-			sourceTree = "<group>";
-		};
-		742820EF29BA74CC00DC9758 /* pportUITests */ = {
-			isa = PBXGroup;
-			children = (
-				742820F029BA74CC00DC9758 /* pportUITests.swift */,
-				742820F229BA74CC00DC9758 /* pportUITestsLaunchTests.swift */,
-			);
-			path = pportUITests;
 			sourceTree = "<group>";
 		};
 		747FB47829BE791300C64662 /* Frameworks */ = {
@@ -486,8 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742820F329BA74CC00DC9758 /* pportUITestsLaunchTests.swift in Sources */,
-				742820F129BA74CC00DC9758 /* pportUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

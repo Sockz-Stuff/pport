@@ -10,7 +10,7 @@
 import XCTest
 @testable import pport
 import Firebase
-import FirebaseAuth
+import Firebase/FirebaseAuth
 
 class LoginViewTests: XCTestCase {
     func testLoginButtonEnabled() {
