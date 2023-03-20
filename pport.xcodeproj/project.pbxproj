@@ -10,7 +10,6 @@
 		742820D629BA74CB00DC9758 /* pportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820D529BA74CB00DC9758 /* pportApp.swift */; };
 		742820DA29BA74CC00DC9758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820D929BA74CC00DC9758 /* Assets.xcassets */; };
 		742820DD29BA74CC00DC9758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742820DC29BA74CC00DC9758 /* Preview Assets.xcassets */; };
-		742820E729BA74CC00DC9758 /* pportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820E629BA74CC00DC9758 /* pportTests.swift */; };
 		7428210129BA758F00DC9758 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210029BA758F00DC9758 /* FirebaseAuth */; };
 		7428210329BA758F00DC9758 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7428210229BA758F00DC9758 /* FirebaseFirestore */; };
 		7428210729BA772700DC9758 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7428210629BA772700DC9758 /* GoogleService-Info.plist */; };
@@ -57,6 +56,7 @@
 		74C714D529BA7B3300CD75FC /* IngredientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BB29BA7ABB00CD75FC /* IngredientType.swift */; };
 		74C714D629BA7B3300CD75FC /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BC29BA7ABB00CD75FC /* RecipeModel.swift */; };
 		74C714D729BA7B3300CD75FC /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C714BD29BA7ABB00CD75FC /* AddModel.swift */; };
+		86A3C68D29C7C96300A46FF8 /* pportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742820E629BA74CC00DC9758 /* pportTests.swift */; };
 		D4C1295029BACE3800DCEDE3 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C1294F29BACE3800DCEDE3 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +168,7 @@
 				74C714BE29BA7ABB00CD75FC /* Main */,
 				74C714B829BA7ABB00CD75FC /* Models */,
 				74C7149529BA785000CD75FC /* RTabView.swift */,
+				742820E629BA74CC00DC9758 /* pportTests.swift */,
 				D4C1294E29BACE1D00DCEDE3 /* Recipe */,
 				742820D429BA74CB00DC9758 /* pport */,
 				742820E529BA74CC00DC9758 /* pportTests */,
@@ -209,7 +210,6 @@
 		742820E529BA74CC00DC9758 /* pportTests */ = {
 			isa = PBXGroup;
 			children = (
-				742820E629BA74CC00DC9758 /* pportTests.swift */,
 			);
 			path = pportTests;
 			sourceTree = "<group>";
@@ -440,6 +440,7 @@
 				74C714CB29BA7B3300CD75FC /* AddView.swift in Sources */,
 				74831C1329BE84690067BF3D /* Login.swift in Sources */,
 				74C714CC29BA7B3300CD75FC /* PantryIngredientView.swift in Sources */,
+				86A3C68D29C7C96300A46FF8 /* pportTests.swift in Sources */,
 				74831C1729BE97B00067BF3D /* Dlogin.swift in Sources */,
 				74BB743529BEA284008B9881 /* GeneratorView.swift in Sources */,
 				74C714CD29BA7B3300CD75FC /* IngredientTitleView.swift in Sources */,
@@ -464,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742820E729BA74CC00DC9758 /* pportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
