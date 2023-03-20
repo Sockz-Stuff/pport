@@ -1,16 +1,15 @@
 //
-//  pportTests.swift
+//  pportTestCases.swift
 //  pportTests
 //
-//  Created by Marshall Jones on 3/9/23.
+//  Created by Daniel Boules on 3/19/23.
 //
-
-//  I used "LoginView instead of Dlogin but it shouldn't matter.
-
+//
 import XCTest
 @testable import pport
-import "Firebase"
-import "Firebase/FirebaseAuth"
+import Firebase
+import FirebaseAuth
+import SwiftUI
 
 class LoginViewTests: XCTestCase {
     func testLoginButtonEnabled() {
